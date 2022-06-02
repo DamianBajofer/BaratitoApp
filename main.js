@@ -5,6 +5,6 @@ app.get("/", (request, response) => {
     response.send("HOLA PERROS")
 })
 
-app.listen(3000, () => {
+app.listen(80, () => {
     console.log("HOLA PERROS!")
 })
