@@ -1,0 +1,29 @@
+{
+  "name": "baratitoapp",
+  "version": "1.0.0",
+  "description": "Descuento para tiendas adheridas",
+  "main": "main.js",
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DamianBajofer/BaratitoApp.git"
+  },
+  "keywords": [
+    "Baratito",
+    "app",
+    "descuentos",
+    "tiendas"
+  ],
+  "author": "Damian Bajofer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DamianBajofer/BaratitoApp/issues"
+  },
+  "homepage": "https://github.com/DamianBajofer/BaratitoApp#readme"
+}
