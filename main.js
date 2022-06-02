@@ -7,5 +7,5 @@ app.get("/", (request, response) => {
     response.send("HOLA PERROS")
 })
 app.listen(app.get("port"), () => {
-    console.log("HOLA PERROS!")
+    console.log(`Youre in port ${process.env.PORT}`)
 })
