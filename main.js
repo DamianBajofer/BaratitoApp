@@ -8,7 +8,15 @@ app.get("/", (request, response) => {
 })
 
 app.get("/home", (request, response) => {
-    response.render("src/views/home")
+    response.render("home")
+})
+
+app.get("/register", (request, response) => {
+    response.render(require("register"))
+})
+
+app.get("/login", (request, response) => {
+    response.render(app.path("login"))
 })
 
 app.listen(app.get("port"), () => {
