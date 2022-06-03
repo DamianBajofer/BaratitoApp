@@ -16,7 +16,7 @@ app.get("/register", (request, response) => {
 })
 
 app.get("/login", (request, response) => {
-    response.render(app.path("login"))
+    response.render("login")
 })
 
 app.listen(app.get("port"), () => {
