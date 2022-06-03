@@ -4,7 +4,7 @@ const app = express()
 app.set("port", process.env.PORT || 3000)
 
 app.get("/home", (request, response) => {
-    response.render(app.path("src/views/index.html"))
+    response.render()
 })
 app.listen(app.get("port"), () => {
     console.log(`Escuchando en puerto ${process.env.PORT}`)
