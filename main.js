@@ -3,7 +3,7 @@ const app = express()
 
 app.set("port", process.env.PORT || 3000)
 
-app.get("/", (request, response) => {
+app.get("host=discountshops.herokuapp.com", (request, response) => {
     response.send("HOLA PERROS")
 })
 app.listen(app.get("port"), () => {
