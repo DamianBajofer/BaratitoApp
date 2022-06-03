@@ -10,9 +10,8 @@ app.set("views", path.join(__dirname, "views"))
 router.get("/", (request, response) => {
     response.render("index")
 })
-
-router.get("/home", (request, response) => {
-    response.render("home")
+app.get("/home", {root: path.join(__dirname, "views")}, (request, response) => {
+    response.sendFile("home")
 })
 
 app.use("/", router)
