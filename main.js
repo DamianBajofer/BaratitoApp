@@ -8,23 +8,7 @@ app.get("/", (request, response) => {
 })
 
 app.get("/home", (request, response) => {
-    response.render(app.path("src/views/home"))
-})
-
-app.get("/register", (request, response) => {
-    response.render(app.path("/src/views/register"))
-})
-
-app.get("/login", (request, response) => {
-    response.render(app.path("./src/views/login"))
-})
-
-app.get("/tokens", (request, response) => {
-    response.render(`${__dirname}/src/views/index`)
-})
-
-app.get("/tokens1", (request, response) => {
-    response.render(app.path(`${__dirname}/src/views/index`))
+    response.render("src/views/home")
 })
 
 app.listen(app.get("port"), () => {
