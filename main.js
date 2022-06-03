@@ -1,5 +1,7 @@
 const express = require("express")
 const app = express()
+const router = express.Router()
+const path = require("path")
 
 app.set("port", process.env.PORT || 3000)
 
@@ -8,18 +10,10 @@ app.get("/", (request, response) => {
 })
 
 app.get("/home", (request, response) => {
-    response.render("home")
+    response.render(path.join(__dirname, "views", "login.html"))
 })
 
-app.get("/register", (request, response) => {
-    response.render(require("register"))
-})
-
-app.set("login", "./views/login")
-app.get("/login", (request, response) => {
-    response.render(app.get("login"))
-})
-
+app.use("/", router)
 app.listen(app.get("port"), () => {
     console.log(`Escuchando en puerto ${process.env.PORT}`)
 })
