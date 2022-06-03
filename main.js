@@ -5,21 +5,14 @@ const path = require("path")
 
 app.set("port", process.env.PORT || 3000)
 
+app.set("views", path.join(__dirname, "views"))
+
 app.get("/", (request, response) => {
     response.render("index")
 })
 
 app.get("/home", (request, response) => {
-    response.sendFile(path.join(__dirname, "views", "home"))
-})
-app.get("/home1", (request, response) => {
-    response.sendFile(path.join(__dirname, "views", "home.html"))
-})
-app.get("/home2", (request, response) => {
-    response.sendFile("./views/home")
-})
-app.get("/home3", (request, response) => {
-    response.sendFile("views/home")
+    response.render("home")
 })
 
 app.use("/", router)
