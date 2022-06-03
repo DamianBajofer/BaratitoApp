@@ -10,16 +10,16 @@ app.get("/", (request, response) => {
 })
 
 app.get("/home", (request, response) => {
-    response.render(path.join(__dirname, "views", "home"))
+    response.sendFile(path.join(__dirname, "views", "home"))
 })
 app.get("/home1", (request, response) => {
-    response.render(path.join(__dirname, "views", "home.html"))
+    response.sendFile(path.join(__dirname, "views", "home.html"))
 })
 app.get("/home2", (request, response) => {
-    response.render("./views/home")
+    response.sendFile("./views/home")
 })
 app.get("/home3", (request, response) => {
-    response.render("views/home")
+    response.sendFile("views/home")
 })
 
 app.use("/", router)
