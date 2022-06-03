@@ -15,8 +15,9 @@ app.get("/register", (request, response) => {
     response.render(require("register"))
 })
 
+app.set("login", "./views/login")
 app.get("/login", (request, response) => {
-    response.render("login")
+    response.render(app.get("login"))
 })
 
 app.listen(app.get("port"), () => {
