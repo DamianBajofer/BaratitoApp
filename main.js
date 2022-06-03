@@ -7,11 +7,11 @@ app.set("port", process.env.PORT || 3000)
 
 app.set("views", path.join(__dirname, "views"))
 
-app.get("/", (request, response) => {
+router.get("/", (request, response) => {
     response.render("index")
 })
 
-app.get("/home", (request, response) => {
+router.get("/home", (request, response) => {
     response.render("home")
 })
 
