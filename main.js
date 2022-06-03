@@ -10,15 +10,16 @@ app.get("/", (request, response) => {
 })
 
 app.get("/home", (request, response) => {
-    response.render(path.join(`${__dirname}/views/home.html`))
+    response.render(path.join(__dirname, "views", "home"))
 })
-
-app.get("/register", (request, response) => {
-    response.render(path.join(path.join(`${__dirname}/views/register`))
+app.get("/home1", (request, response) => {
+    response.render(path.join(__dirname, "views", "home.html"))
 })
-
-app.get("/login", (request, response) => {
-    response.render(path.join(__dirname, "views", "login.html"))
+app.get("/home2", (request, response) => {
+    response.render("./views/home")
+})
+app.get("/home3", (request, response) => {
+    response.render("views/home")
 })
 
 app.use("/", router)
