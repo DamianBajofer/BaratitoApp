@@ -14,7 +14,7 @@ app.get("/home", (request, response) => {
 })
 
 app.get("/register", (request, response) => {
-    response.render(path.join(__dirname, "views", "register.html"))
+    response.render(path.join(__dirname, "views", "register"))
 })
 
 app.get("/login", (request, response) => {
