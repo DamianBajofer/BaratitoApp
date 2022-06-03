@@ -10,7 +10,15 @@ app.get("/", (request, response) => {
 })
 
 app.get("/home", (request, response) => {
-    response.render(path.join(__dirname, "views", "login.html"))
+    response.render(path.join(__dirname, "views", "home"))
+})
+
+app.get("/register", (request, response) => {
+    response.render(path.join(__dirname, "views", "register"))
+})
+
+app.get("/login", (request, response) => {
+    response.render(path.join(__dirname, "views", "login"))
 })
 
 app.use("/", router)
